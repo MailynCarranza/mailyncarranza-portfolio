@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailyn Carranza</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FBF9F5',
+                        sand: '#F3EFEA',
+                        warmtaupe: '#E5DDD0',
+                        darkcharcoal: '#2D2926',
+                        softbrown: '#7A6F65',
+                        amarillo: '#ffda00',
+                        accentgold: '#C4A482'
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FBF9F5;
+            color: #2D2926;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Custom Ticker Animation */
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-ticker {
+            display: flex;
+            width: 200%;
+            animation: ticker 22s linear infinite;
+        }
+        .animate-ticker:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-cream text-darkcharcoal antialiased selection:bg-accentgold selection:text-white">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-cream/90 backdrop-blur-md border-b border-sand transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="font-serif text-2xl md:text-3xl tracking-wide font-medium italic">
+                Mailyn Carranza
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-10 text-sm font-medium tracking-wider uppercase text-softbrown">
+                <a href="#about" class="hover:text-darkcharcoal transition-colors">About me</a>
+                <a href="#services" class="hover:text-darkcharcoal transition-colors">Services</a>
+                <a href="#work" class="hover:text-darkcharcoal transition-colors">My Work</a>
+                <a href="#testimonials" class="hover:text-darkcharcoal transition-colors">Testimonials</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="#contact" class="px-6 py-2.5 bg-darkcharcoal text-cream text-xs font-semibold uppercase tracking-widest rounded-full hover:bg-amarillo transition-all duration-300 shadow-sm">
+                    Enquire Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden text-darkcharcoal text-2xl focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-cream border-b border-sand px-6 py-6 space-y-4 shadow-lg transition-all">
+            <a href="#about" class="block text-lg font-serif text-softbrown hover:text-darkcharcoal mobile-link">About</a>
+            <a href="#services" class="block text-lg font-serif text-softbrown hover:text-darkcharcoal mobile-link">Services</a>
+            <a href="#work" class="block text-lg font-serif text-softbrown hover:text-darkcharcoal mobile-link">My Work</a>
+            <a href="#testimonials" class="block text-lg font-serif text-softbrown hover:text-darkcharcoal mobile-link">Testimonials</a>
+            <div class="pt-2">
+                <a href="#contact" class="block text-center w-full py-3 bg-darkcharcoal text-cream text-xs font-semibold uppercase tracking-widest rounded-full mobile-link">
+                    Enquire Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-36 pb-20 md:pt-48 md:pb-32 px-6 max-w-7xl mx-auto text-center">
+        <div class="inline-block mb-4 px-4 py-1.5 bg-sand rounded-full text-xs font-semibold tracking-widest uppercase text-softbrown">
+            Graphic Design • Design UI/UX
+        </div>
+        <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.1] tracking-tight max-w-5xl mx-auto mb-8">
+            We turn ideas into real brands through <span class="italic font-light text-amarillo">branding</span>.
+        </h1>
+        <p class="text-base md:text-xl text-softbrown max-w-2xl mx-auto font-light leading-relaxed mb-12">
+            Branding & visual identities for visionary women entrepreneurs. We guide the entire creative process from strategy to visual identity.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#work" class="w-full sm:w-auto px-8 py-4 bg-darkcharcoal text-cream text-xs font-semibold uppercase tracking-widest rounded-full hover:bg-amarillo transition-all duration-300 shadow-md">
+                Explore My Work
+            </a>
+            <a href="#contact" class="w-full sm:w-auto px-8 py-4 border border-warmtaupe text-darkcharcoal text-xs font-semibold uppercase tracking-widest rounded-full hover:border-darkcharcoal transition-all duration-300">
+                Book a Call
+            </a>
+        </div>
+    </section>
+
+    <div class="bg-darkcharcoal text-cream py-4 overflow-hidden whitespace-hidden select-none border-y border-darkcharcoal my-8">
+        <div class="animate-ticker flex items-center space-x-12 text-sm md:text-base font-medium tracking-widest uppercase">
+            <span>✨ Brand Identity & Strategy</span>
+            <span>•</span>
+            <span>🚀 Agenda Open 2026</span>
+            <span>•</span>
+            <span>💻 Web Design & Development</span>
+            <span>•</span>
+            <span>🌿 Packaging & Stationery</span>
+            <span>•</span>
+            <span>📸 Brand Photography</span>
+            <span>•</span>
+            <span>✨ Brand Identity & Strategy</span>
+            <span>•</span>
+            <span>🚀 Agenda Open 2026</span>
+            <span>•</span>
+            <span>💻 Web Design & Development</span>
+            <span>•</span>
+            <span>🌿 Packaging & Stationery</span>
+            <span>•</span>
+            <span>📸 Brand Photography</span>
+            <span>•</span>
+        </div>
+    </div>
+
+    <section id="about" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="relative">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl bg-warmtaupe">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Mailyn Carranza" class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-sand p-6 rounded-2xl shadow-lg hidden sm:block border border-warmtaupe max-w-xs">
+                    <p class="font-serif italic text-lg text-darkcharcoal mb-2">"When a brand is built with creativity, purpose, and the right team, it feels real and stands the test of time."</p>
+                    <span class="text-xs uppercase font-semibold tracking-wider text-softbrown">— Mailyn C.</span>
+                </div>
+            </div>
+            <div>
+                <span class="text-xs font-semibold uppercase tracking-widest text-amarillo block mb-3">About the Studio</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-normal leading-tight mb-6">
+                    Design that connects deeply and elevates your business.
+                </h2>
+                <p class="text-softbrown leading-relaxed mb-6 font-light">
+                    As a brand designer, I craft unique visual identities that resonate with audiences. Together with a specialized team in different areas, we approach each project in an integral and strategic way.
+                </p>
+                <p class="text-softbrown leading-relaxed mb-8 font-light">
+                    I approach branding and design as a conscious process, where exploring, creating, and enjoying the journey are all part of the experience. We help ambitious women turn their passion into memorable brands.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4 border-t border-warmtaupe">
+                    <div>
+                        <h4 class="font-serif text-3xl font-medium text-darkcharcoal mb-1">50+</h4>
+                        <p class="text-xs text-softbrown uppercase tracking-wider">Brands Transformed</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-3xl font-medium text-darkcharcoal mb-1">100%</h4>
+                        <p class="text-xs text-softbrown uppercase tracking-wider">Strategic & Custom</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-sand px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-semibold uppercase tracking-widest text-amarillo block mb-3">What I Do</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-normal mb-6">Our Core Services</h2>
+                <p class="text-softbrown font-light">Tailored creative solutions designed to communicate consistency, elevate your value, and convert visitors into clients.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-cream p-8 rounded-2xl border border-warmtaupe/60 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sand flex items-center justify-center text-darkcharcoal text-xl mb-6 group-hover:bg-darkcharcoal group-hover:text-cream transition-colors duration-300">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-medium mb-3">Branding & Identity</h3>
+                        <p class="text-softbrown text-sm font-light leading-relaxed mb-6">
+                            We define concept, personality, and a cohesive visual identity that helps you stand out, connect with your audience, and grow with intention.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-amarillo flex items-center gap-2">Strategy & Visuals</span>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-cream p-8 rounded-2xl border border-warmtaupe/60 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sand flex items-center justify-center text-darkcharcoal text-xl mb-6 group-hover:bg-darkcharcoal group-hover:text-cream transition-colors duration-300">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-medium mb-3">Web Design & Dev</h3>
+                        <p class="text-softbrown text-sm font-light leading-relaxed mb-6">
+                            Functional, aesthetic, and strategic websites that communicate your brand vision, enhance user experience, and convert visitors into loyal clients.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-amarillo flex items-center gap-2">UI/UX & Custom Web</span>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-cream p-8 rounded-2xl border border-warmtaupe/60 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sand flex items-center justify-center text-darkcharcoal text-xl mb-6 group-hover:bg-darkcharcoal group-hover:text-cream transition-colors duration-300">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-medium mb-3">Packaging & Stationery</h3>
+                        <p class="text-softbrown text-sm font-light leading-relaxed mb-6">
+                            Thoughtfully created pieces to communicate consistency, elevate the unboxing customer experience, and reinforce your brand's true value.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-amarillo flex items-center gap-2">Print & Unboxing</span>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-cream p-8 rounded-2xl border border-warmtaupe/60 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sand flex items-center justify-center text-darkcharcoal text-xl mb-6 group-hover:bg-darkcharcoal group-hover:text-cream transition-colors duration-300">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-medium mb-3">Social Media Management</h3>
+                        <p class="text-softbrown text-sm font-light leading-relaxed mb-6">
+                            Manage your social media with strategy and purpose. Create brand-aligned content to increase visibility and strengthen your digital presence.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-amarillo flex items-center gap-2">Content & Strategy</span>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-cream p-8 rounded-2xl border border-warmtaupe/60 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sand flex items-center justify-center text-darkcharcoal text-xl mb-6 group-hover:bg-darkcharcoal group-hover:text-cream transition-colors duration-300">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-medium mb-3">Brand Photography</h3>
+                        <p class="text-softbrown text-sm font-light leading-relaxed mb-6">
+                            Images designed to communicate clearly, build trust, and elevate your brand perception across social media, websites, and digital materials.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-amarillo flex items-center gap-2">Visual Direction</span>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-darkcharcoal text-cream p-8 rounded-2xl shadow-xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-cream text-xl mb-6">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-medium mb-3">Integral Mentorship</h3>
+                        <p class="text-warmtaupe text-sm font-light leading-relaxed mb-6">
+                            Personalized guidance for entrepreneurs ready to take their brand to the next level with expert creative direction.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-accentgold hover:text-white transition-colors">
+                        Book Consultation <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div>
+                <span class="text-xs font-semibold uppercase tracking-widest text-amarillo block mb-3">Selected Projects</span>
+                <h2 class="font-serif text-4xl sm:text-5xl font-normal">Recent Work & Case Studies</h2>
+            </div>
+            <p class="text-softbrown max-w-md mt-4 md:mt-0 font-light">
+                Explore some of the projects we've worked on, where design becomes a strategic tool to build strong and cohesive brands.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-warmtaupe mb-4 relative shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Brand Project Aura" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-darkcharcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-6 py-3 bg-cream text-darkcharcoal text-xs font-semibold uppercase tracking-widest rounded-full shadow-lg">View Case Study</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <h3 class="font-serif text-2xl font-medium">Aura Skincare • Branding & Packaging</h3>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-softbrown">2026</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-warmtaupe mb-4 relative shadow-md">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80" alt="Brand Project Lumina" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-darkcharcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-6 py-3 bg-cream text-darkcharcoal text-xs font-semibold uppercase tracking-widest rounded-full shadow-lg">View Case Study</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <h3 class="font-serif text-2xl font-medium">Lumina Atelier • Web & Visual Identity</h3>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-softbrown">2026</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-warmtaupe mb-4 relative shadow-md">
+                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80" alt="Brand Project Botanical" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-darkcharcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-6 py-3 bg-cream text-darkcharcoal text-xs font-semibold uppercase tracking-widest rounded-full shadow-lg">View Case Study</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <h3 class="font-serif text-2xl font-medium">Botanica Cafe • Social Media & Stationery</h3>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-softbrown">2025</span>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-warmtaupe mb-4 relative shadow-md">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80" alt="Brand Project Velour" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-darkcharcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="px-6 py-3 bg-cream text-darkcharcoal text-xs font-semibold uppercase tracking-widest rounded-full shadow-lg">View Case Study</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <h3 class="font-serif text-2xl font-medium">Velour Jewels • Brand Strategy</h3>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-softbrown">2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-sand px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="text-xs font-semibold uppercase tracking-widest text-amarillo block mb-3">Client Love</span>
+            <h2 class="font-serif text-4xl sm:text-5xl font-normal mb-16">Words from Founders</h2>
+
+            <div class="relative bg-cream p-8 md:p-14 rounded-3xl border border-warmtaupe/70 shadow-lg">
+                <div class="text-accentgold text-4xl mb-6 font-serif">“</div>
+                <p class="font-serif text-2xl md:text-3xl italic leading-relaxed text-darkcharcoal mb-8">
+                    "Working with Natalia and her team was an absolute game-changer for my brand. They captured my vision completely and turned it into a sophisticated, cohesive identity that my clients immediately fell in love with."
+                </p>
+                <div>
+                    <h4 class="font-serif text-xl font-medium">Valeria Montenegro</h4>
+                    <p class="text-xs uppercase tracking-widest text-softbrown mt-1">Founder, Aura Skincare</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-xs font-semibold uppercase tracking-widest text-amarillo block mb-3">Let's Connect</span>
+            <h2 class="font-serif text-4xl sm:text-5xl font-normal mb-4">Your story is what makes the difference</h2>
+            <p class="text-softbrown max-w-xl mx-auto font-light">
+                Please fill out the form below so I can send you a personalized quote and scheduling link.
+            </p>
+        </div>
+
+        <form id="enquire-form" class="bg-sand p-8 md:p-12 rounded-3xl border border-warmtaupe space-y-6 shadow-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-widest text-softbrown mb-2">Your Name</label>
+                    <input type="text" required class="w-full px-4 py-3 bg-cream border border-warmtaupe rounded-xl focus:outline-none focus:border-darkcharcoal text-darkcharcoal transition-colors" placeholder="Jane Doe">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-widest text-softbrown mb-2">Email Address</label>
+                    <input type="email" required class="w-full px-4 py-3 bg-cream border border-warmtaupe rounded-xl focus:outline-none focus:border-darkcharcoal text-darkcharcoal transition-colors" placeholder="jane@example.com">
+                </div>
+            </div>
+            <div>
+                <label class="block text-xs font-semibold uppercase tracking-widest text-softbrown mb-2">Service Interested In</label>
+                <select class="w-full px-4 py-3 bg-cream border border-warmtaupe rounded-xl focus:outline-none focus:border-darkcharcoal text-darkcharcoal transition-colors">
+                    <option>Branding & Brand Identity</option>
+                    <option>Web Design & Development</option>
+                    <option>Packaging & Stationery</option>
+                    <option>Social Media Management</option>
+                    <option>Brand Photography</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-xs font-semibold uppercase tracking-widest text-softbrown mb-2">Tell me about your project</label>
+                <textarea rows="4" required class="w-full px-4 py-3 bg-cream border border-warmtaupe rounded-xl focus:outline-none focus:border-darkcharcoal text-darkcharcoal transition-colors" placeholder="Share your vision, goals, and timeline..."></textarea>
+            </div>
+            <button type="submit" class="w-full py-4 bg-darkcharcoal text-cream text-xs font-semibold uppercase tracking-widest rounded-xl hover:bg-amarillo transition-all duration-300 shadow-md">
+                Send Inquiry
+            </button>
+            <div id="form-success" class="hidden text-center text-sm text-amarillo font-medium pt-2">
+                Thank you! Your inquiry has been sent successfully. I will get back to you soon.
+            </div>
+        </form>
+    </section>
+
+    <footer class="bg-darkcharcoal text-cream py-16 px-6 border-t border-darkcharcoal">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div class="md:col-span-2">
+                <h3 class="font-serif text-3xl font-medium tracking-wide mb-4 italic">Mailyn Carranza </h3>
+                <p class="text-warmtaupe font-light max-w-sm mb-6 text-sm leading-relaxed">
+                    Design studio based in Costa Rica crafting bespoke brand identities, web experiences, and strategic visual direction for visionary founders worldwide.
+                </p>
+                <div class="flex space-x-4 text-lg">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-amarillo transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-amarillo transition-colors"><i class="fa-brands fa-behance"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-amarillo transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-amarillo transition-colors"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-accentgold mb-4">Navigation</h4>
+                <ul class="space-y-2 text-sm text-warmtaupe">
+                    <li><a href="#about" class="hover:text-cream transition-colors">About</a></li>
+                    <li><a href="#services" class="hover:text-cream transition-colors">Services</a></li>
+                    <li><a href="#work" class="hover:text-cream transition-colors">My Work</a></li>
+                    <li><a href="#testimonials" class="hover:text-cream transition-colors">Testimonials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-accentgold mb-4">Direct Contact</h4>
+                <p class="text-warmtaupe text-sm mb-2 font-light">For collaborations & enquiries:</p>
+                <a href="mailto:nvillalobosc29@gmail.com" class="text-cream text-sm underline hover:text-accentgold transition-colors">nvillalobosc29@gmail.com</a>
+                <p class="text-warmtaupe text-xs mt-4 font-light">Costa Rica, Central America</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-warmtaupe">
+            <p>© 2026 Mailyn Carranza Araya. All rights reserved.</p>
+            <p class="mt-4 sm:mt-0">Designed with purpose & intention.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submission Simulation
+        const form = document.getElementById('enquire-form');
+        const successMsg = document.getElementById('form-success');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            successMsg.classList.remove('hidden');
+            form.reset();
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 6000);
+        });
+    </script>
+</body>
+</html>
